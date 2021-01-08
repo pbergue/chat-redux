@@ -1,7 +1,40 @@
 body {
   font-family: Helvetica;
 }
+
+ul {
+  padding-inline-start: 0;
+}
 .app {
   margin-top: 20px;
   margin-bottom: 20px;
+  display: flex;
+}
+
+.channel-list {
+  list-style: none;
+  width: 30%;
+  margin-left: 100px;
+  background-color: rgb(185, 126, 126);
+}
+
+.message-list {
+  list-style: none;
+  width: 70%;
+  background-color: rgb(151, 170, 185);
+  padding: 5px;
+  .message-form {
+    display: flex;
+    input {
+      width: 70%;
+    }
+    button {
+      width: 30%;
+    }
+  }
+  .message {
+    background-color: white;
+    border: 1px solid orangered;
+    padding: 10px 5px
+  }
 }
