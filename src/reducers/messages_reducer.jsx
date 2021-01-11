@@ -9,9 +9,11 @@ export default function(state = null, action) {
     case FETCH_MESSAGES:
       return action.payload.messages;
     case SUBMIT_MESSAGES:
-      let newMessages = action.payload.messages.slice(0);
-      newMessages.push(state);
-      return newMessages;
+      // console.log(action.payload.content);
+      // console.log(state);
+      // const newMessages = state.slice(0);
+      // newMessages.push(action.payload);
+      return [...state, action.payload];
     default:
       return state;
   }

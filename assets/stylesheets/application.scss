@@ -1,9 +1,16 @@
 body {
   font-family: Helvetica;
+  margin: none;
 }
 
 ul {
   padding-inline-start: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 .app {
   margin-top: 20px;
@@ -16,13 +23,18 @@ ul {
   width: 30%;
   margin-left: 100px;
   background-color: rgb(185, 126, 126);
+  .selected {
+    font-weight: bolder;
+  }
 }
 
 .message-list {
-  list-style: none;
   width: 70%;
   background-color: rgb(151, 170, 185);
   padding: 5px;
+  li {
+    list-style: none;
+  }
   .message-form {
     display: flex;
     input {
@@ -34,7 +46,7 @@ ul {
   }
   .message {
     background-color: white;
-    border: 1px solid orangered;
-    padding: 10px 5px
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.3);
+    padding: 5px 10px
   }
 }

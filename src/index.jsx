@@ -30,8 +30,8 @@ const initialState = {
       "created_at":"2017-09-26T23:03:21.194Z"
     }
   ],
-  channels: ['general', 'react', 'rennes'],
-  selectedChannel: "general",
+  channels: ['General', 'React', 'Rennes'],
+  selectedChannel: "General",
   currentUser: prompt("What's your username ?")
 };
 

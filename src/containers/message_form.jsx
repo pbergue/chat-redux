@@ -13,8 +13,14 @@ class MessageForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(){
+  componentDidMount() {
+    this.messageInput.focus();
+  }
+
+  handleSubmit(event){
+    event.preventDefault();
     this.props.submitMessages(this.props.selectedChannel, this.props.currentUser, this.state.value);
+    this.setState({value: ""});
   };
 
   handleChange(event){
@@ -22,10 +28,9 @@ class MessageForm extends Component {
   };
 
   render() {
-    console.log(this.state.value);
     return (
       <form className="message-form" onSubmit={this.handleSubmit}>
-        <input type="text" value={this.state.value} onChange={this.handleChange} />
+        <input type="text" value={this.state.value} onChange={this.handleChange} ref={(input) => { this.messageInput = input; }} />
         <button className="btn btn-primary" type="submit" value="Submit">Send</button>
       </form>
     );
